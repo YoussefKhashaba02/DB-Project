@@ -1,13 +1,19 @@
 import java.util.Hashtable;
 import java.util.Iterator;
+import java.util.Vector;
 
 public class DBApp {
+	
+	Vector<Table> tables;
+	
 	public void createTable(String strTableName,
 			 String strClusteringKeyColumn,
 			Hashtable<String,String> htblColNameType,
 			Hashtable<String,String> htblColNameMin,
 			Hashtable<String,String> htblColNameMax )
 			 throws DBAppException{
+		
+		Table newTable = new Table(strTableName,strClusteringKeyColumn,htblColNameType);
 		
 	}
 	
@@ -48,5 +54,13 @@ public class DBApp {
 		
 	}
 
+	public static void main(String[]args) {
+		Hashtable<String,String> htblColNameType = new Hashtable( ); 
+		htblColNameType.put("id", "java.lang.Integer"); 
+		htblColNameType.put("name", "java.lang.String"); 
+		htblColNameType.put("gpa", "java.lang.double"); 
+		
+		
+	}
 
 }
