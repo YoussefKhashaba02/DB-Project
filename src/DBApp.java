@@ -14,6 +14,7 @@ public class DBApp {
 			 throws DBAppException{
 		
 		Table newTable = new Table(strTableName,strClusteringKeyColumn,htblColNameType);
+		tables.add(newTable);
 		
 	}
 	

@@ -4,10 +4,12 @@ import java.util.Vector;
 
 public class Page {
 	private Vector<Hashtable> records;
+	int size;
 	int maxSize = 200;
 	
 	
 	public Page() {
+		size = 0;
 		this.records = new Vector<Hashtable>() ;
 	}
 
@@ -19,5 +21,8 @@ public class Page {
 		this.records = records;
 	}
 	
+	public boolean isEmpty() {
+		
+	}
 	
 }
